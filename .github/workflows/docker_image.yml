@@ -56,7 +56,7 @@ jobs:
     # my_bridge_network 사용하도록 지정
     - name: Docker run
       run: |
-        sudo docker stop app1 && sudo docker rm app1 && sudo docker rmi ${{ secrets.DOCKER_USERNAME }}/devops_step1:latest
-        sudo docker run -d --network my_bridge_network --name app1 --restart always ${{ secrets.DOCKER_USERNAME }}/devops_step1:latest
-        sudo docker stop app2 && sudo docker rm app2 && sudo docker rmi ${{ secrets.DOCKER_USERNAME }}/devops_step1:latest
-        sudo docker run -d --network my_bridge_network --name app2 --restart always ${{ secrets.DOCKER_USERNAME }}/devops_step1:latest
+        sudo docker stop ubuntu-app1-1 && sudo docker rm ubuntu-app1-1 && sudo docker rmi ${{ secrets.DOCKER_USERNAME }}/devops_step1:latest
+        sudo docker run -d --network my_bridge_network --name ubuntu-app1-1 --restart always ${{ secrets.DOCKER_USERNAME }}/devops_step1:latest
+        sudo docker stop ubuntu-app2-1 && sudo docker rm ubuntu-app2-1 && sudo docker rmi ${{ secrets.DOCKER_USERNAME }}/devops_step1:latest
+        sudo docker run -d --network my_bridge_network --name ubuntu-app2-1 --restart always ${{ secrets.DOCKER_USERNAME }}/devops_step1:latest
