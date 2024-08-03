@@ -67,3 +67,5 @@ jobs:
         sudo docker run -d --network ubuntu_my_bridge_network --name ubuntu-app2-1 --restart always ${{ secrets.DOCKER_USERNAME }}/devops_step1:${{ env.VERSION }}
         sudo docker image prune -af
       #위 명령은 사용되지 않는 도커이미지를 삭제한다
+      #docker-compose-nginx.yml 파일이 실행되는 위치 폴더 명입니다 
+
